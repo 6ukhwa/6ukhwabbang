@@ -46,24 +46,27 @@ nav li {
     justify-content: flex-start;
     align-items: center;
 }
-.gnb {}
+.gnb {padding: 10px 0px;}
 .gnb ul {
-    display: flex;
+    /* display: flex; */
     justify-content: flex-end;
-    align-items: center;    
+    align-items: center;
+  
 }
 .gnb a {
     display: block;
     font-size: 14px;
-    padding: 5px;
+    padding: 15px 5px;
 }
+
 
 /* 메인이미지 */
 .topimg {max-width: 100%;}
 
 
 
-/* 공지 */
+
+/* 공지사항 설정 */
 
 /* .box4 h2 {
     font-size: 20px;
@@ -78,9 +81,9 @@ nav li {
     margin: 5px;
     border-bottom: 1px solid #000;
 } */
-
 .notice {
-   
+   border: 5px solid #ddd;
+   padding: 20px;
 }
 .notice h2 {
     margin-bottom: 5px;
@@ -108,18 +111,62 @@ nav li {
 }
 
 
-/* 푸터 */
-.copyright {
-    /* background-color: #ddd; */
-    padding-top: 15px;
-    padding-bottom: 15px;
-    
-}
-.copyright p {
+/* sns 설정 */
+.sns {}
+.sns h2 {
     font-size: 14px;
-    color: #666;
+    background-color: #ddd;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.sns ul {}
+.sns li {
     
 }
+.sns a {
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #fff;}
+
+.sns li:nth-child(1) a {background-color: #63bafb;}
+.sns li:nth-child(2) a {background-color: #5288f7;}
+.sns li:nth-child(3) a {background-color: #f65d4a;}
+
+.sns i {
+    margin-right: 10px;
+}
+
+/* 말풍선제너레이터연결
+https://cssarrowplease.com/
+ */
+
+ .sns h2 {
+	position: relative;
+	background: #dddddd;
+}
+.sns h2:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #dddddd;
+	border-width: 15px;
+	margin-left: -15px;
+}
+
+
+
+/* 푸터 */
+
 
 /* .copyright, .box3, .boxA, .box4 {
     width: 1280px;
@@ -130,10 +177,114 @@ nav li {
     background-color: #ddd;
     padding: 15px 0;
 }
+.copyright {}
+.copyright p {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* 여백설정 */
 .boxA {padding: 8px 10px;}
-.box3 {padding: 15px 10px;}
-.box4 {}
+.box3 {}
+.box4 {padding: 15px 10px;}
 .box5 {}
+.box4-1 {padding: 10px 0;}
+.box4-2 {padding: 10px 0;}
+.box6 {padding-top: 25px;}
+.box6>div {padding: 5px;}
+
+/* 각각 w32% 
+jc space around*/
+
+
+/* 박스6 설정 */
+.box6 a {
+    display: block;
+    background-color: #ddd;
+    text-align: center;
+    color: #fff;
+}
+.box6-1 a {background-color: #bfbd13;}
+.box6-2 a {background-color: #c58839;}
+.box6-3 a {background-color: #859f46;}
+
+.box6 i {
+    padding: 40px 0;
+    font-size: 38px;
+} 
+.box6 h2 {
+    background-color: #222;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+.box6 p {
+    font-size: 12px;
+    background-color: #524e3c;
+    padding: 15px 0;
+}
+
+/* .box6 i {
+    font-size: 38px;
+}
+.box6 .box6-1 {
+    width: 32%;
+    text-align: center;
+}
+.box6 .box6-1 i {
+    background-color: #bfbd13;
+    color: #fff;
+    
+}
+
+
+
+.box6 .box6-2 {
+    width: 32%;
+    text-align: center;
+}
+.box6 .box6-2 i {
+    background-color: #c58839;
+    color: #fff;
+    
+}
+
+
+
+.box6 .box6-3 {
+    width: 32%;
+    text-align: center;
+}
+.box6 .box6-3 i {
+    background-color: #859f46;
+    color: #fff;
+    
+} */
+
+/* menuBtn설정 */
+.menuBtn {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+.menuBtn i {
+    font-size: 18px;
+    
+}
+
+
+/* 메뉴 토글을 클릭했을떄만 보이게 하는 설정 */
+.gnb {display: none;}
+
+
+
+
+
+
 
 /* --------------------미디어쿼리-------------------- */
 
@@ -156,13 +307,40 @@ nav li {
     justify-content: flex-end;
     align-items: center;    
 }
-
+.gnb a {
+    display: block;
+    font-size: 14px;
+    padding: 10px 15px;
 }
 
 
+/* 박스4-1과 박스4-2의 가로정렬 */
+.box4 {display: flex;}
+.box4-1 {width: 70%;
+padding-right: 35px;
+box-sizing: border-box;}
+.box4-2 {width: 30%;}
+
+/* 박스6-1,2,3 가로설정 */
+.box6 {
+    display: flex;
+    justify-content: space-between;
+}
+.box6>div {width: 32%;}
+
+/* menubBtn */
+.menuBtn {
+    display: none;
+}
+/* 메뉴 토글을 클릭했을떄만 보이게 하는 설정 */
+.gnb {display: block !important;}
+
+
+}
+
 /* 와이드데스크탑 */
 @media(min-width:1280px) {
-    .boxA, .box3, .copyright, .box4 {width: 1140px;
+    .boxA, .box3, .copyright, .box4, .box6 {width: 1140px;
         margin: 0 auto;
     }
     .boxA_out {

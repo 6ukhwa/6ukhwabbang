@@ -1,0 +1,243 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+
+
+
+/* 전제설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+a {color: #000;
+text-decoration: none;}
+ul,ol {list-style: none;}
+img {vertical-align: bottom;}
+
+
+/* 헤더설정 */
+
+/* .box1 a {
+    font-size: 40px;
+    font-weight: bold;
+} */
+.logo {
+    font-size: 30px;
+}
+.logo a {}
+
+
+
+
+/* 네비 */
+
+
+/* nav {display: block;}
+nav ul {
+    display: flex;
+    
+}
+nav li {
+    padding: 5px;
+    
+} */
+.box2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.gnb {}
+.gnb ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+}
+.gnb a {
+    display: block;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+/* 메인이미지 */
+.topimg {max-width: 100%;}
+
+
+
+/* 공지 */
+
+/* .box4 h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.box4 ul {
+    display: block;
+    
+    
+}
+.box4 li {
+    margin: 5px;
+    border-bottom: 1px solid #000;
+} */
+
+.notice {
+   border: solid 5px #ddd;
+   padding: 20px;
+}
+.notice h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #666;
+}
+.notice ul {
+    
+}
+.notice li {}
+.notice a {
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+    border-bottom: 2px dotted #ddd;
+    
+}
+.notice a::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.notice time {float: left;}
+.notice .txt {
+    float: none;
+    margin-left: 40px;
+    padding-left: 10px;
+}
+
+
+/* 푸터 */
+.copyright {
+    /* background-color: #ddd; */
+    /* padding-top: 15px;
+    padding-bottom: 15px; */
+    
+}
+.copyright p {
+    font-size: 14px;
+    color: #666;
+    
+}
+
+/* .copyright, .box3, .boxA, .box4 {
+    width: 1280px;
+    margin: 0 auto;
+} */
+
+
+
+/* 박스 4-1과sns 가로정렬을 잘라내서 미디어쿼리 768으로 옮기기 */
+.box5 {
+    background-color: #ddd;
+    padding: 15px 0;
+}
+.boxA {padding: 8px 10px;}
+.box3 {padding: 15px 10px;}
+.box4 {
+    padding: 20px 15px;
+    display: flex;}
+.box4-1 {margin-right: 20px;
+margin-bottom: 10px;
+width: 70%;}
+.box5 {}
+
+.sns {width: 30%;
+    }
+.sns p {
+    
+    background-color: #ddd;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.sns ul {}
+.sns li {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.sns li a {color: #fff;
+display: block;
+font-size: 14px;}
+
+.tw {background-color: #63bafb;
+}
+.fb {background-color: #5288f7;}
+.ig {background-color: #f65d4a;}
+.sns i {margin-right: 15px;}
+
+/* sns설정
+.sns li:nth-child(1) a {background-color: #63bafb;}
+.sns li:nth-child(2) a {background-color: #5288f7;}
+.sns li:nth-child(3) a {background-color: #f65d4a;} */
+
+
+/* 말풍선 연결 제너레이터 
+https://cssarrowplease.com/*/
+
+.sns p {
+	position: relative;
+	background: #ddd;
+}
+.sns p:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #ddd;
+	border-width: 15px;
+	margin-left: -15px;
+}
+
+
+
+
+
+/* --------------------미디어쿼리-------------------- */
+
+/* 768px이상 */
+@media(min-width:768px) {
+    /* 레이아웃 설정 */
+
+.boxA {display: flex;}
+.boxA>div {width: 50%;}
+
+/* 네비설정 */
+.box2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.gnb {}
+.gnb ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+}
+
+}
+
+
+/* 와이드데스크탑 */
+@media(min-width:1280px) {
+    .boxA, .box3, .copyright, .box4 {width: 1140px;
+        margin: 0 auto;
+    }
+    .boxA_out {
+        border-bottom: 1px solid #ddd;
+        padding: 8px 0;
+        margin-bottom: 15px;
+    }
+}
