@@ -1,0 +1,1183 @@
+/* 언어설정 */
+@charset 'utf-8';
+@import url('https://fonts.cdnfonts.com/css/chunkfive');
+@import url('https://fonts.cdnfonts.com/css/chunkfive-print');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+/* font-family: 'ChunkFive Print', sans-serif;
+font-family: 'ChunkFive', sans-serif; */
+
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #323232;
+}
+a {
+    color: #323232;
+    text-decoration: none;
+}
+ul,ol {list-style: none;}
+img {vertical-align: bottom;}
+
+body {font-family: "Pretendard Variable", "Pretendard", "-apple-system", "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;}
+
+
+
+
+/* 헤더 설정#################################### */
+header {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    height: 84px;
+    border-bottom: 1px solid #a4a4a4;
+    z-index: 999;
+
+}
+.header_inner {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.header_inner h1 {
+    width: 150px;
+    height: 43px;
+}
+.header_inner h1 a {}
+.header_inner h1 a img {
+    max-width: 120px;
+    width: 100%;
+}
+.header_inner nav {
+    width: calc(100% - 120px);
+    position: relative;
+    left: 20%
+}
+.header_inner nav ul {
+    display: flex;
+    width: 50%;
+    /* justify-content: space-around; */
+    
+}
+.header_inner nav li {
+    margin: 0 10px;
+}
+.header_inner nav a {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding:30px;
+    transition: transform 0.2s ease;
+}
+.header_inner nav a:hover {
+    color: #FFBC0E;
+    animation: hoverJump 0.2s ease;
+}
+@keyframes hoverJump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 유틸설정###################### */
+
+.header_inner .util {}
+.header_inner .util ul {
+    display: flex;
+    align-items: flex-end;
+}
+.header_inner .util li {
+    padding: 10px;
+}
+.header_inner .util a {
+    position: relative;
+}
+.header_inner .util img {}
+.header_inner .util em {
+    position: absolute;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: -7px;
+    right: -10px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+}
+
+
+
+
+
+/* 첫번째 섹션 설정################################ */
+section:nth-child(1) {
+    height: 900px;
+    background-image: url(img/main_bg_1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+}
+.txt {
+    position: absolute;
+    left: 17%;
+    top: 32%;
+    
+}
+section:nth-child(1) .txt img {
+    width: 650px;
+}
+
+
+
+
+/* 두번째 섹션 설정####################################### */
+section:nth-child(2) {
+    height: 3200px;
+    margin-top: 100px;
+}
+
+.history {}
+
+/* 타이틀 아래에서 위로 */
+
+
+.history_title {opacity: 0;}
+.history_title.on {
+    
+    overflow: hidden;
+   
+     animation: title 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.history_title h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ChunkFive', sans-serif;
+    font-weight: normal;
+   
+}
+@keyframes title {
+    0% {
+      transform: translateY(80px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+.history_title p {
+    font-size: 40px;
+    letter-spacing: 20px;
+    padding: 10px;
+}
+.history_title img {}
+.history_sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+.history_sub img {
+    width: 280px;
+    height: auto;
+    margin: 100px 0px 20px 0px;
+}
+.history_sub p {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+/* 어려운 구간.............############################## */
+
+.history_wrap {
+    position: relative;
+    height: 2300px;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.history_wrap .center {
+    position: absolute;
+    width: 2px;
+    height: 92%;
+    background-color: #323232;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.history_wrap .le_img {
+    z-index: -1;
+    position: absolute;
+    left: 15%;
+    top: 0;
+    height: 400px;
+   
+}
+.history_wrap .ri_img {
+    z-index: -1;
+    position: absolute;
+    right: 15%;
+    top: 0;
+    height: 400px;
+    
+}
+.left1 {
+    width: 50%;
+    height: 500px;
+    text-align: right;
+    position: absolute;
+    padding-right: 60px;
+    left: -100%;
+    top: 0;
+    transition: all 1.2s;
+}
+.right1 {
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    padding-left: 60px;
+    top: 400px;
+    right: -100%;
+    transition: all 1.2s;
+}
+.left2 {
+    width: 50%;
+    height: 500px;
+    text-align: right;
+    position: absolute;
+    padding-right: 60px;
+    left: -100%;
+    top: 800px;
+    transition: all 1.2s;
+}
+.right2 {
+    width: 50%;
+    height: 500px;
+    position: absolute;
+    padding-left: 60px;
+    top: 1200px;
+    right: -100%;
+    transition: all 1.2s;
+}
+.left3 {
+    width: 50%;
+    height: 500px;
+    text-align: right;
+    position: absolute;
+    padding-right: 60px;
+    left: -100%;
+    top: 1600px;
+    transition: all 1.2s;
+}
+.history_wrap h2 {
+    font-family: 'ChunkFive Print', sans-serif;
+    font-size: 150px;
+    font-weight: normal;
+}
+.history_wrap h2 strong {
+    color: #FFBC0E;
+    font-weight: normal;
+}
+.history_wrap h4 {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 5px;
+}
+.history_wrap p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.history_end {
+    opacity: 0;
+}
+.history_end.on {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    animation: end 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes end {
+    0% {
+      transform: translateY(80px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+.history_end img {
+    width: 500px;
+    height: auto;
+}
+.history_end span {
+    font-size: 120px;
+    font-family: 'ChunkFive Print', serif;
+    color: #FFBC0E;
+    margin: 20px;
+}
+.history_end p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+
+}
+
+
+
+/* 세벤째 섹션 설정 제품 슬라이드##################################### */
+section:nth-child(3) {
+    background-image: url(img/cloud_width.jpg);
+    height: 850px;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.product {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.product h2 {
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: normal;
+    font-family: 'ChunkFive';
+    
+}
+
+.product ul {
+    display: flex;
+    margin-top: 30px;
+    /* background-color: red; */
+}
+.product li {
+    margin: 0px 40px;
+}
+.product a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product li a img {
+    width: 320px;
+    margin: 30px;
+}
+.product li span {
+    color: #FFBC0E;
+    font-size: 16px;
+}
+.product li strong {
+    font-size: 25px;
+    font-weight: 600;
+}
+.product .pro_icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.product .pro_icon img {
+    width: 30px;
+    margin: 15px 5px;
+}
+.product .pro_icon img:hover {
+    animation: hoverJump 0.2s ease;
+}
+
+@keyframes hoverJump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 검색창################################ */
+.product .search {
+    width: 600px;
+    height: 70px;
+    background-color: #fff;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: -3px 3px 10px gray;
+    
+}
+.product .search .inner_box {
+    width: 570px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product .search i {
+    color: #323232;
+    font-size: 24px;
+}
+.product .search .sc_btn {
+    background-color: #ffbc0e;
+    width: 114px;
+    height: 50px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -3px 3px 10px gray;
+}
+.product .search .sc_btn em {
+    color: #fff;
+    font-style: normal;
+    font-size: 20px;
+}
+
+
+/* 인풋설정############################# */
+input {
+    border: none;
+    font-size: 18px;
+    width: 370px;
+    height: 35px;
+    color: #323232;
+}
+input:focus {
+    outline: none;
+}
+
+
+/* 텍스트 슬라이드 설정#################################### */
+section:nth-child(4) {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.txt_slide {
+    font-family: 'ChunkFive', sans-serif;
+    font-weight: normal;
+    font-size: 100px;
+    overflow: hidden;
+    width: 100%;
+   
+}
+.marquee1 {
+    position: absolute;
+    top: 80px;
+    /* left: 0; */
+    animation: flowText1 20s linear infinite;
+}
+.marquee1-1 {
+    position: absolute;
+    top: 80px;
+    /* left: 0; */
+    animation: flowText1-1 20s linear infinite;
+}
+.marquee2 {
+    position: absolute;
+    bottom: 80px;
+    /* right: 0; */
+    animation: flowText2 20s linear infinite;
+}
+.marquee2-1 {
+    position: absolute;
+    bottom: 80px;
+    /* right: 0; */
+    animation: flowText2-1 20s linear infinite;
+}
+
+@keyframes flowText1 {
+    0% {left: 0;}
+   
+    100% {left: -2940px;}
+}
+@keyframes flowText1-1 {
+    0% {left: 2940px;}
+   
+    100% {left: 0;}
+}
+@keyframes flowText2 {
+    0% {right: 0;}
+   
+    100% {right: -2940px;}
+}
+@keyframes flowText2-1 {
+    0% {right: 2940px;}
+   
+    100% {right: 0;}
+}
+
+
+.marquee1 strong {
+    color: #FFBC0E;
+}
+.marquee1 span {
+    color: transparent;
+    -webkit-text-stroke: #FFBC0E 2px;
+    margin: 0 20px;
+}
+.marquee1-1 strong {
+    color: #FFBC0E;
+}
+.marquee1-1 span {
+    color: transparent;
+    -webkit-text-stroke: #FFBC0E 2px;
+    margin: 0 20px;
+}
+
+
+
+.marquee2 strong {color: #FFBC0E;}
+.marquee2 span {
+    margin: 0 20px;
+    color: transparent;
+    -webkit-text-stroke: #FFBC0E 2px;
+}
+.marquee2-1 strong {color: #FFBC0E;}
+.marquee2-1 span {
+    margin: 0 20px;
+    color: transparent;
+    -webkit-text-stroke: #FFBC0E 2px;
+}
+
+
+/* 다섯번째 섹션########################################### */
+section:nth-child(5) {
+    background-image: url(img/paper_bg.jpg);
+    height: 1650px;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.flavour {}
+.flavour_inner {
+    height: 1500px;
+    position: relative;
+   
+}
+.flavour_inner h2 {
+    color: #323232;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: normal;
+    font-family: 'ChunkFive';
+}
+.flavour_inner .iceCream {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    z-index: 10;
+    
+}
+ .flavour_inner .iceCream li {
+    margin-top: 100px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+   
+}
+.flavour_inner .iceCream li img {
+    position: relative;
+    transition: all 0.5s;
+    transform:scale(1);
+    display: block;
+    top: 0;
+}
+.flavour_inner .iceCream li:hover img {
+    transform: scale(0);
+    top: 200px;
+    opacity: 0;
+}
+.iceCream li:hover {
+    opacity: 0;
+}
+.iceCream li:hover .circle li {
+    opacity: 1;
+}
+
+
+.flavour_inner .circle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    position: absolute;
+    top: 0%;
+   
+z-index: 1;
+
+    
+}
+.flavour_inner .circle li {
+    width: 330px;
+    height: 330px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: relative;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+     opacity: 0;
+    
+}
+
+.flavour_inner .circle  li strong {
+    color: #FFBC0E;
+    position: absolute;
+    top: 23%;
+}
+.flavour_inner .circle li p {
+    position: absolute;
+    top: 33%;
+}
+.flavour_inner .circle li img {
+    width: 280px;
+    height: auto;
+    position: absolute;
+    bottom: -220px;
+    left: 12%;
+    transition: all 0.5s;
+    
+}
+
+
+
+
+
+
+.flavour_inner img {
+    width: 350px;
+    height: auto;
+}
+.flavour_inner strong {
+    font-size: 18px;
+    font-style: normal;
+    margin: 5px 0px;
+}
+.flavour_inner p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+/* top버튼 설정 */
+body {
+    position: relative;
+}
+.top_btn {
+    position: absolute;
+    left: 50%;
+    bottom: 350px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+
+/* 푸터 설정################################## */
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: #3F833F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    color: #fff;
+    font-size: 28px;
+}
+footer p:nth-child(2) {
+    font-size: 14px;
+    margin-top: 20px;
+}
+ 
+
+
+/* 숨기기 구간!!!!!!!!!!!!!!!!############################ */
+
+
+.main {
+    /* display: none; */
+}
+.logIn {
+    display: none;
+}
+.detail_page {
+    display: none;
+}
+
+
+/* 로그인페이지############################################ */
+
+.logIn {
+    background-image: url(img/cloud_login.jpg);
+    width: 100%;
+    height: calc(100vh - 83px);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 83px;
+    left: 0;
+}
+.log_box {
+    width: 500px;
+    height: 450px;
+    background-color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -225px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.log_box img {
+    width: 260px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    margin-left: -130px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    
+}
+.warning {
+    opacity: 0;
+}
+.warning p {
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+    width: 300px;
+    
+}
+.txt_area {
+    width: 300px;
+    margin-top: 20px;
+}
+.txt_area input {
+    width: 100%;
+    font-size: 16px;
+    color: #323232;
+    padding-left: 5px;
+    border-bottom: 1px solid #a4a4a4;
+}
+
+.btn_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.btn_area button {
+    width: 300px;
+    height: 40px;
+    background-color:#FFBC0E;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.log_box .caption {
+    margin-top: 15px;
+    text-align: center;
+}
+.log_box .caption a {
+    margin: 0 50px;
+    font-size: 15px;
+}
+
+
+
+/* 상세페이지########################################### */
+
+
+
+.detail_page {}
+
+.sale_inner {
+    padding-top: 83px;
+}
+.pro_main {
+    display: flex;
+    height: 850px;
+    align-items: start;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+}
+
+
+/* 큰사진 설정 */
+.big_img {
+    width: 650px;
+    height: 650px;
+    margin-top: 30px;
+    border: solid 1px #a4a4a4;
+}
+.big_img ul {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.big_img li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.big_img li:nth-child(2) {opacity: 0;}
+.big_img li:nth-child(3) {opacity: 0;}
+.big_img li img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 작은사진 설정 */
+.small_img {
+    width: 310px;
+    margin-top: 30px;
+}
+.small_img ul {
+    display: flex;
+    justify-content: space-around;
+}
+.small_img li {
+    border: 1px solid #a4a4a4;
+}
+.small_img li img {
+    width: 90px;
+    height: auto;
+}
+
+
+/* 서브박스 1 설정  */
+.pro_sub {
+    width: 490px;
+    height: 788px;
+    margin-top: 30px;
+    border-radius: 30px;
+    box-shadow: rgba(119, 129, 138, 0.2) 0px 8px 24px;
+}
+.pro_sub .pro_sub_inner {
+    margin: 50px;
+}
+.pro_sub strong {
+    font-size: 20px;
+    font-family: 'ChunkFive', sans-serif;
+    color: #FFBC0E;
+    font-weight: normal;
+}
+.pro_sub p {
+    font-size: 16px;
+    font-weight: bold;
+}
+.pro_sub .pro_sub_inner>div {
+    margin-left: 20px;
+}
+.pro_sub .sub_box1 {
+    margin-top: 30px;
+    height: 180px;
+    cursor: pointer;
+}
+.pro_sub h4 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+.pro_sub ul {
+    display: flex;
+}
+.pro_sub li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+.pro_sub li img {}
+.pro_sub li em {
+    border: 1px solid #a4a4a4;
+    text-align: center;
+    margin-top: 5px;
+    font-style: normal;
+}
+
+/* 서브박스2 설정 */
+.sub_box2 {
+    border-top: 1px solid #a4a4a4;
+    margin-top: 20px;
+    padding-top: 20px;
+    height: 300px;
+}
+.sub_box2 h4 {}
+.sub_box2 select {
+    width: 90%;
+    height: 30px;
+}
+
+
+/* 서브박스 3 설정 */
+.sub_box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.sub_box3 p {
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub_box3 em {
+    font-style: normal;
+    font-weight: normal;
+    margin-right: 5px;
+}
+.sub_box3 p strong {
+    color: #323232;
+    font-weight: bold;
+}
+.sub_box3 input {
+    color: #fff;
+    background-color: #FFBC0E;
+    width: 220px;
+    height: 43px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sub_box3 img {
+    margin-left: 20px;
+}
+.sub_box3 .addCart {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        border-top: 1px solid #a4a4a4;
+        padding-top: 20px;
+        cursor: pointer;
+}
+
+
+
+
+/* 추천제품 설정 */
+
+.recommend {
+    height: 500px;
+    margin-top: 50px;
+    
+}
+.recommend p {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 22px;
+}
+.recommend ul {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #000;
+}
+.recommend li {}
+.recommend li img {
+    width: 210px;
+    margin-top: 20px;
+    
+    
+}
+.recommend li p {
+    margin: 10px 0px 5px 0; 
+    font-size: 16px;
+    font-weight: normal;
+}
+.recommend li strong {
+    font-size: 16px;
+}
+
+
+
+
+/* 장바구니 팝업페이지 설정####################### */
+
+.popUp {
+    width: 100%;
+    height: calc(100vh - 83px);
+    position: fixed;
+    left: 0;
+    top: 83px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: flex-end;
+display: none;
+z-index: 998;
+}
+.popUp .popUp_inner {
+    width: 35%;
+    height: calc(100vh - 83px);
+    background-color: #fff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    right: -35%;
+    top: 0;
+    transition: all 1.2s;
+    opacity: 0;
+
+}
+.popUp .popUp_inner.on {opacity: 1;
+right: 0;}
+
+
+
+.popUp_contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.popUp_contents .popUp_subt {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+.popUp_contents .popUp_subt li {
+    margin: 10px;
+}
+.popUp>span {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.popUp_inner h2 {
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    margin: 30px;
+}
+.popUp_pd {
+    width: 90%;
+    border-top: 1px solid #323232;
+    height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.popUp_pd p {
+    font-size: 20px;
+}
+.popUp_inner .popUp_btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.popUp_inner .popUp_btn li {
+    font-size: 18px;
+    height: 60px;
+    width: 220px;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    cursor: pointer;
+}
+.popUp_inner .popUp_btn li:nth-child(1) {
+    background-color: #FFBC0E;
+    color: #fff;
+}
+
+
+
+
+/* 미디어쿼리 구간############################################ */
+
+/* 모바일 */
+@media(max-width:600px){}
+
+/* 와이드 데스크탑 */
+@media(min-width:1280px) {
+    .header_inner, .txt, .footer_inner, .flavour_inner, .sale_inner {
+        width: 1280px;
+        margin: 0 auto;
+    }
+}
